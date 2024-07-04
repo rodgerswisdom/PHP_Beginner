@@ -9,11 +9,16 @@
         $this->num2 = $num2;
     }
 
-    public function plus($num1, $num2){
-        return $this->plus($num1, $num2);
-    }
+   public function add(){
+    return $this->num1 + $this->num2;
 }
 
-$myCalculator = new Calculator(50,60);
+public function subtract(){
+    return $this->num1 - $this->num2;
+}
 
-echo $myCalculator;
+ }
+
+$myCalculator = new Calculator(60, 50);
+echo "Addition =" . $myCalculator->add(); "\n";
+echo "\n Subtraction =" . $myCalculator->subtract(); "\n";
