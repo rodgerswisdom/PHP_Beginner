@@ -22,3 +22,5 @@ public function subtract(){
 $myCalculator = new Calculator(60, 50);
 echo "Addition =" . $myCalculator->add(); "\n";
 echo "\n Subtraction =" . $myCalculator->subtract(); "\n";
+
+// echo "\nAbsolute value " . abs(-2);
