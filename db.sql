@@ -1,3 +1,6 @@
+--MySQL retrieves and displays DATETIME values in 'YYYY-MM-DD hh:mm:ss'--
+
+
 CREATE TABLE users(  
     id int NOT NULL AUTO_INCREMENT,  
     f_name varchar(45) NOT NULL,
@@ -10,11 +13,16 @@ CREATE TABLE users(
 
 INSERT INTO users
 (id, f_name, l_name, email, phone, last_signin)
-VALUES(1, "maurice", "oyugi", "0712930121", 2025-01-30-00-47-00);
+VALUES(1, "maurice", "oyugi", "0712930121", '2025-01-30 00:52:00');
 
 CREATE TABLE auth(
     id int NOT NULL AUTO_INCREMENT,
+    user_id int,
     last_signin datetime NOT NULL,
-    signin_attempt datetime not null,
-    sign_up_date datetime not null
+    signin_attempt int not null,
+    sign_up_date datetime not null,
+    FOREIGN KEY (user_id) REFERENCES Persons (id)
 );
+
+insert into auth
+VALUES(1,1,'2025-01-30 00:52:00',1, '2025-01-30 00:52:00');
