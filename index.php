@@ -5,7 +5,7 @@
 
 <body>
 
-<h1>Hello</h1>
+<h1>We are creating an authentication service using php, mysql and js</h1>
 
 <?php
 
