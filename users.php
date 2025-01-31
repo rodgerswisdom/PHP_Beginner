@@ -1,12 +1,12 @@
 <?php
     require_once './config/database.php';    
-
-class Auth
+// WE NEED TO CALL CLASSES FROM  HTML FILES
+class users
 {
-    public $f_name;
-    public $l_name;
-    public $email;
-    public $phone;
+    public $f_name = $_POST['f_name'];
+    public $l_name = $_POST['l_name'];
+    public $email = $_POST['email'];
+    public $phone = $_POSt['phone'];
     // public $confirm_password;
 
     function __construct(){
@@ -19,7 +19,11 @@ class Auth
            (f_name, l_name,email,phone,last_signin)
             VALUES($f_name, $l_name, $email, $phone,$last_signin);";
         
-             
+        $query_result = $$result->query($query);
+
+        if(!query_result) die ('Fatal Error');
+
+        echo "Signed up successfully";        
     }
     dbClose($result);
 }

@@ -23,17 +23,12 @@
         <input type="email" />
         <br />
 
-        <label for="passwords">
-        Password:
+        <label for="phone">
+        phone:
         </label>
-        <input type="password" />
+        <input type="text" />
         <br />
         
-         <label for="confirm_password">
-        Confirm Password:
-        </label>
-        <input type="password" />
-        <br />
         <input type="submit" value="Sign Up" />
     </form>
 </body>
