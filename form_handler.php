@@ -1,5 +1,7 @@
 <?php
 
+include "users.php";
+
 function get_form($f_name, $l_name, $email, $phone)
 {
     if(isset($_POST['submit'])){
@@ -8,5 +10,10 @@ function get_form($f_name, $l_name, $email, $phone)
         $email = $_POST['email'];
         $phone = $_ POST['phone'];
     }
+
+
+    $user = new users();
+    $user->signup($f_name,$l_name,$email,$phone);
+
 }
 ?>

@@ -4,7 +4,7 @@
 </head>
 <body>
     <h1>Auth Service, hot like your mom</h1>
-    <form action="users.php" method="post">
+    <form action="form_handler.php" method="post">
         <label for="f_name">
         First Name:
         </label>
