@@ -1,23 +1,16 @@
 <?php
-    require_once './config/database.php';    
-// WE NEED TO CALL CLASSES FROM  HTML FILES
+require_once './config/database.php';    
+
 class users
 {
-    public $f_name = $_POST['f_name'];
-    public $l_name = $_POST['l_name'];
-    public $email = $_POST['email'];
-    public $phone = $_POSt['phone'];
-    // public $confirm_password;
-
-    function __construct(){
+   public function __construct(){
         $result  =dbConnect();
     }
 
-    function signup($f_name, $l_name, $email, $phone){
-        $sign_up_date = time.now();
+   public function signup($f_name, $l_name, $email, $phone){
         $query = "INSERT INTO users
-           (f_name, l_name,email,phone,last_signin)
-            VALUES($f_name, $l_name, $email, $phone,$last_signin);";
+           (f_name, l_name,email,phone)
+            VALUES($f_name, $l_name, $email, $phone);";
         
         $query_result = $$result->query($query);
 
