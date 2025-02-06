@@ -18,7 +18,7 @@ class users
 
         echo "Signed up successfully";        
     }
-    dbClose($result);
+   // dbClose($result);
 }
 
 ?>

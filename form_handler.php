@@ -4,11 +4,11 @@ include "users.php";
 
 function get_form($f_name, $l_name, $email, $phone)
 {
-    if(isset($_POST['submit'])){
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
         $f_name = $_POST['f_name'];
         $l_name = $_POST['l_name'];
         $email = $_POST['email'];
-        $phone = $_ POST['phone'];
+        $phone = $_POST['phone'];
     }
 
 
