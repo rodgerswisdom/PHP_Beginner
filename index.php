@@ -31,5 +31,12 @@
         
         <input type="submit" value="Sign Up" />
     </form>
+
+    <?php
+        if (isset($_GET['message'])){
+            echo"<h1>".htmlspecialchars($_GET['message'])."</h1>";
+        }
+    ?>
+
 </body>
 </html>

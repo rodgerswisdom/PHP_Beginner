@@ -13,7 +13,9 @@ function get_form($f_name, $l_name, $email, $phone)
 
 
     $user = new users();
-    $user->signup($f_name,$l_name,$email,$phone);
-
+    $message = $user->signup($f_name,$l_name,$email,$phone);
+    
+    header("Location: form.html?message=" . urlencode($message));
+    exit();
 }
 ?>
